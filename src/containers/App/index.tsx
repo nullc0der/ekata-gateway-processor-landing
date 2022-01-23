@@ -4,6 +4,7 @@ import Features from 'components/Features'
 import Integration from 'components/Integration'
 import Plugins from 'components/Plugins'
 import Currencies from 'components/Currencies'
+import Pricing from 'components/Pricing'
 
 import './App.css'
 
@@ -16,6 +17,7 @@ function App() {
             <Integration />
             <Plugins />
             <Currencies />
+            <Pricing />
         </div>
     )
 }
