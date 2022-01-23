@@ -11,37 +11,37 @@ import { ReactComponent as OdooLogo } from 'assets/img/odoo.svg'
 const SUPPORTED_PLUGINS = [
     {
         name: 'Python',
-        logo: <PythonLogo className="w-[150px] h-[150px]" />,
+        logo: <PythonLogo className="w-[100px] h-[100px]" />,
         comingSoon: true,
     },
     {
         name: 'React',
-        logo: <ReactLogo className="w-[150px] h-[150px]" />,
+        logo: <ReactLogo className="w-[100px] h-[100px]" />,
         comingSoon: true,
     },
     {
         name: 'Android',
-        logo: <AndroidLogo className="w-[150px] h-[150px]" />,
+        logo: <AndroidLogo className="w-[100px] h-[100px]" />,
         comingSoon: true,
     },
     {
         name: 'iOS',
-        logo: <IosLogo className="w-[150px] h-[150px]" />,
+        logo: <IosLogo className="w-[100px] h-[100px]" />,
         comingSoon: true,
     },
     {
         name: 'WooCommerce',
-        logo: <WooCommerceLogo className="w-[150px] h-[150px]" />,
+        logo: <WooCommerceLogo className="w-[100px] h-[100px]" />,
         comingSoon: true,
     },
     {
         name: 'Shopify',
-        logo: <ShopifyLogo className="w-[150px] h-[150px]" />,
+        logo: <ShopifyLogo className="w-[100px] h-[100px]" />,
         comingSoon: true,
     },
     {
         name: 'Odoo',
-        logo: <OdooLogo className="w-[150px] h-[150px]" />,
+        logo: <OdooLogo className="w-[100px] h-[100px]" />,
         comingSoon: true,
     },
 ]

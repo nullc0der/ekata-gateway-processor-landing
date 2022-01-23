@@ -3,6 +3,7 @@ import Hero from 'components/Hero'
 import Features from 'components/Features'
 import Integration from 'components/Integration'
 import Plugins from 'components/Plugins'
+import Currencies from 'components/Currencies'
 
 import './App.css'
 
@@ -14,6 +15,7 @@ function App() {
             <Features />
             <Integration />
             <Plugins />
+            <Currencies />
         </div>
     )
 }
