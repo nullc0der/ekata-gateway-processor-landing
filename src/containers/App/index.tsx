@@ -2,6 +2,7 @@ import Header from 'components/Header'
 import Hero from 'components/Hero'
 import Features from 'components/Features'
 import Integration from 'components/Integration'
+import Plugins from 'components/Plugins'
 
 import './App.css'
 
@@ -12,6 +13,7 @@ function App() {
             <Hero />
             <Features />
             <Integration />
+            <Plugins />
         </div>
     )
 }
