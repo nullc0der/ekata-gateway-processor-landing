@@ -2,8 +2,8 @@ import PaymentFormGIF from 'assets/img/payment-form.gif'
 
 const Hero = () => {
     return (
-        <div className="lg:h-screen bg-gray-100 flex flex-row pt-16">
-            <div className="flex flex-col lg:justify-center w-full sm:w-6/12">
+        <div className="h-screen bg-gray-100 flex flex-row pt-16">
+            <div className="flex flex-col justify-center w-full sm:w-6/12">
                 <div className="p-4 sm:p-6 lg:ml-14 lg:p-0">
                     <p className="text-7xl 2xl:text-8xl text-green-500">
                         Ekata

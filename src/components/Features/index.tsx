@@ -7,7 +7,7 @@ const Features = () => {
         <div className="lg:h-screen bg-gray-200 flex flex-col lg:flex-row p-4">
             <div className="w-full lg:w-4/12 mt-4 lg:mt-0">
                 <div className="flex w-full h-full justify-center items-center">
-                    <p className="text-4xl lg:text-7xl text-gray-600">
+                    <p className="text-4xl lg:text-6xl text-gray-600">
                         Features
                     </p>
                 </div>
