@@ -14,11 +14,11 @@ function App() {
         <div className="App relative bg-gray-50 overflow-x-hidden">
             <Header />
             <Hero />
-            <Features />
-            <Integration />
-            <Plugins />
-            <Currencies />
-            <Pricing />
+            <Features id="features" />
+            <Integration id="integration" />
+            <Plugins id="plugins" />
+            <Currencies id="currencies" />
+            <Pricing id="pricing" />
             <Footer />
         </div>
     )

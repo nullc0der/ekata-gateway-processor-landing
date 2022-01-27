@@ -11,53 +11,70 @@ import { ReactComponent as OdooLogo } from 'assets/img/odoo.svg'
 const SUPPORTED_PLUGINS = [
     {
         name: 'Python',
-        logo: <PythonLogo className="w-[100px] h-[100px]" />,
+        subtitle:
+            'Python is an interpreted high-level general-purpose programming language',
+        logo: <PythonLogo className="w-[60px] h-[60px]" />,
         comingSoon: true,
     },
     {
         name: 'React',
-        logo: <ReactLogo className="w-[100px] h-[100px]" />,
+        subtitle:
+            'React is a free and open-source front-end JavaScript library for building user interfaces based on UI components',
+        logo: <ReactLogo className="w-[60px] h-[60px]" />,
         comingSoon: true,
     },
     {
         name: 'Android',
-        logo: <AndroidLogo className="w-[100px] h-[100px]" />,
+        subtitle:
+            'Android is a mobile operating system based on a modified version of the Linux kernel and other open source software',
+        logo: <AndroidLogo className="w-[60px] h-[60px]" />,
         comingSoon: true,
     },
     {
         name: 'iOS',
-        logo: <IosLogo className="w-[100px] h-[100px]" />,
+        subtitle:
+            'iOS is a mobile operating system created and developed by Apple Inc. exclusively for its hardware',
+        logo: <IosLogo className="w-[60px] h-[60px]" />,
         comingSoon: true,
     },
     {
         name: 'WooCommerce',
-        logo: <WooCommerceLogo className="w-[100px] h-[100px]" />,
+        subtitle:
+            'WooCommerce is an open-source e-commerce plugin for WordPress',
+        logo: <WooCommerceLogo className="w-[60px] h-[60px]" />,
         comingSoon: true,
     },
     {
         name: 'Shopify',
-        logo: <ShopifyLogo className="w-[100px] h-[100px]" />,
+        subtitle:
+            'Shopify is a proprietary e-commerce platform for online stores and retail point-of-sale systems',
+        logo: <ShopifyLogo className="w-[60px] h-[60px]" />,
         comingSoon: true,
     },
     {
         name: 'Odoo',
-        logo: <OdooLogo className="w-[100px] h-[100px]" />,
+        subtitle: 'Odoo is a suite of business management software tools',
+        logo: <OdooLogo className="w-[60px] h-[60px]" />,
         comingSoon: true,
     },
 ]
 
-const Plugins = () => {
+interface PluginsProps {
+    id: string
+}
+
+const Plugins = ({ id }: PluginsProps) => {
     return (
-        <div className="bg-gray-200 flex flex-col p-8">
+        <div className="bg-gray-100 flex flex-col p-20" id={id}>
             <div className="text-center">
-                <p className="text-4xl lg:text-5xl text-gray-600">
+                <p className="text-3xl font-medium text-gray-600">
                     Your Favorite Plugins Supported
                 </p>
             </div>
             <div className="flex flex-row flex-wrap mt-10 justify-center">
                 {SUPPORTED_PLUGINS.map((x, i) => (
                     <motion.div
-                        className="bg-white rounded-md shadow-lg flex flex-col items-center justify-around mx-2 my-4 w-[250px] h-[250px] relative"
+                        className="bg-white rounded-md shadow-lg flex flex-col items-center justify-center mx-2 my-4 relative py-4 px-8"
                         whileHover={{ scale: 1.1, zIndex: 1 }}
                         whileTap={{ scale: 1.1, zIndex: 1 }}
                         key={i}>
@@ -67,7 +84,12 @@ const Plugins = () => {
                             </div>
                         )}
                         {x.logo}
-                        <p className="text-base text-gray-500">{x.name}</p>
+                        <p className="text-base font-medium mt-4 text-gray-500">
+                            {x.name}
+                        </p>
+                        <p className="text-sm text-center mt-4 w-[250px] text-gray-700">
+                            {x.subtitle}
+                        </p>
                     </motion.div>
                 ))}
             </div>

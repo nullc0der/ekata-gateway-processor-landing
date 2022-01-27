@@ -1,26 +1,32 @@
 export const menuItems = [
     {
         name: 'Home',
-        link: '#',
+        link: '/',
+        external: false,
     },
     {
         name: 'Plugins',
-        link: '#',
+        link: '#plugins',
+        external: false,
     },
     {
         name: 'Docs',
-        link: '#',
+        link: 'https://gpdocs.ekata.io',
+        external: true,
     },
     {
         name: 'Features',
-        link: '#',
+        link: '#features',
+        external: false,
     },
     {
         name: 'Pricing',
-        link: '#',
+        link: '#pricing',
+        external: false,
     },
     {
         name: 'Getting Started',
-        link: '#',
+        link: '#integration',
+        external: false,
     },
 ]

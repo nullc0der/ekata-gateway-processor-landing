@@ -24,18 +24,24 @@ const Footer = () => {
                 <div className="flex flex-col mt-4 sm:mt-0 sm:w-3/12">
                     <p className="text-lg text-white">Links</p>
                     <a
-                        href="/"
-                        className="text-sm text-white mt-2 hover:underline">
+                        href="https://gpdocs.ekata.io/"
+                        className="text-sm text-white mt-2 hover:underline"
+                        target="_blank"
+                        rel="noreferrer">
                         Docs
                     </a>
                     <a
-                        href="/"
-                        className="text-sm text-white mt-2 hover:underline">
+                        href="https://gpconsole.ekata.io/register"
+                        className="text-sm text-white mt-2 hover:underline"
+                        target="_blank"
+                        rel="noreferrer">
                         Register
                     </a>
                     <a
-                        href="/"
-                        className="text-sm text-white mt-2 hover:underline">
+                        href="https://gpconsole.ekata.io"
+                        className="text-sm text-white mt-2 hover:underline"
+                        target="_blank"
+                        rel="noreferrer">
                         Console
                     </a>
                 </div>

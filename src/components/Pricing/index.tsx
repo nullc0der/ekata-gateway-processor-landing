@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion'
+
 const PRICINGS = [
     {
         title: 'Basic Free',
@@ -81,35 +83,49 @@ const PRICINGS = [
     },
 ]
 
-const Pricing = () => {
+interface PricingProps {
+    id: string
+}
+
+const Pricing = ({ id }: PricingProps) => {
     return (
-        <div className="bg-gray-200 flex flex-col p-8">
+        <div className="bg-gray-100 flex flex-col p-8" id={id}>
             <div className="text-center">
-                <p className="text-4xl lg:text-5xl text-gray-600">Pricing</p>
+                <p className="text-4xl lg:text-5xl text-gray-600 font-semibold">
+                    Pricing
+                </p>
             </div>
             <div className="flex flex-row flex-wrap justify-center mt-10">
                 {PRICINGS.map((x, i) => (
-                    <div
-                        className={`flex flex-col px-8 py-2 mx-2 my-4 justify-center h-[400px] w-[300px] bg-white rounded-md shadow-lg relative before:absolute before:top-0 before:rounded-t before:left-0 before:block before:content-[''] before:w-full before:h-1 ${x.beforeColor}`}
+                    <motion.div
+                        whileHover={{ scale: 1.1, zIndex: 1 }}
+                        whileTap={{ scale: 1.1, zIndex: 1 }}
+                        className={`flex flex-col px-8 py-4 m-4 h-[500px] w-[400px] bg-white rounded-md shadow-lg relative before:absolute before:top-0 before:rounded-t before:left-0 before:block before:content-[''] before:w-full before:h-1 ${x.beforeColor}`}
                         key={i}>
-                        <p className="text-2xl text-gray-700">{x.title}</p>
-                        <p
-                            className={`text-sm text-gray-400 ${
-                                i === 0 ? 'my-4' : 'my-2'
-                            }`}>
+                        <p className="text-3xl font-medium text-gray-700 text-center mt-5">
+                            {x.title}
+                        </p>
+                        <p className={`text-sm text-gray-400 my-2`}>
                             {x.subtitle}
                         </p>
-                        {x.features.map((y, i) => (
-                            <div className="flex justify-between mt-2" key={i}>
-                                <p className="text-sm">{y.name}</p>
-                                <p className={`text-sm ${x.textColor}`}>
-                                    {y.description}
-                                </p>
-                            </div>
-                        ))}
-                        <p className="mt-4 text-base">Starting At:</p>
-                        <div className="flex justify-between mt-2">
-                            <p className={`text-lg ${x.textColor}`}>
+                        <div className="mt-8 sm:mt-16">
+                            {x.features.map((y, i) => (
+                                <div
+                                    className="flex justify-between mt-4"
+                                    key={i}>
+                                    <p className="text-sm font-semibold">
+                                        {y.name}
+                                    </p>
+                                    <p className={`text-sm ${x.textColor}`}>
+                                        {y.description}
+                                    </p>
+                                </div>
+                            ))}
+                        </div>
+                        <div className="flex-1" />
+                        <p className="text-base font-semibold">Starting At:</p>
+                        <div className="flex justify-between">
+                            <p className={`text-2xl ${x.textColor}`}>
                                 ${x.price}
                             </p>
                             <p className={`text-lg ${x.textColor}`}>/BTC mo</p>
@@ -120,7 +136,7 @@ const Pricing = () => {
                                 Order Now
                             </button>
                         </div>
-                    </div>
+                    </motion.div>
                 ))}
             </div>
         </div>
