@@ -30,7 +30,12 @@ const Hero = () => {
                             servers!! Leave that heavy lifting for us.
                         </p>
                         <button className="bg-green-500 px-6 h-12 w-40 rounded text-white mt-2 ml-1">
-                            DEMO
+                            <a
+                                href="https://gatewayprocessordemo.ekata.io/"
+                                target="_blank"
+                                rel="noreferrer">
+                                Demo
+                            </a>
                         </button>
                     </div>
                 </div>

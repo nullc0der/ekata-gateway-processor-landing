@@ -83,25 +83,42 @@ const Header = () => {
                         leave="transition duration-100 ease-out"
                         leaveFrom="transform scale-100 opacity-100"
                         leaveTo="transform scale-50 opacity-0">
-                        <div className="px-2 pt-2 pb-3 space-y-1 absolute top-2 right-2 left-2 shadow-xl rounded-md bg-white sm:hidden">
+                        <div className="px-2 pt-2 pb-3 space-y-1 absolute top-4 right-4 left-4 shadow-2xl rounded-md bg-white sm:hidden">
                             <Disclosure.Button className="absolute right-4 top-4 text-green-400">
                                 <XIcon
                                     className="block h-6 w-6"
                                     aria-hidden="true"
                                 />
                             </Disclosure.Button>
-                            {menuItems.map((x, i) => (
-                                <Disclosure.Button
-                                    key={i}
-                                    as="a"
-                                    className="text-gray-700 block px-3 py-2 rounded-md"
-                                    href={x.link}>
-                                    {x.name}
-                                </Disclosure.Button>
-                            ))}
+                            {menuItems.map((x, i) =>
+                                x.external ? (
+                                    <Disclosure.Button
+                                        key={i}
+                                        as="a"
+                                        className="text-gray-700 block px-3 py-2 rounded-md"
+                                        href={x.link}
+                                        target="_blank"
+                                        rel="noreferrer">
+                                        {x.name}
+                                    </Disclosure.Button>
+                                ) : (
+                                    <Disclosure.Button
+                                        key={i}
+                                        as="a"
+                                        className="text-gray-700 block px-3 py-2 rounded-md"
+                                        href={x.link}>
+                                        {x.name}
+                                    </Disclosure.Button>
+                                )
+                            )}
                             <div className="mx-2">
                                 <button className="bg-green-500 py-2 w-full rounded text-white sm:hidden">
-                                    Login
+                                    <a
+                                        href="https://gpconsole.ekata.io"
+                                        target="_blank"
+                                        rel="noreferrer">
+                                        Login
+                                    </a>
                                 </button>
                             </div>
                         </div>
