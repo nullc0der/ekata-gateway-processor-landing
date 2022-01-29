@@ -7,6 +7,8 @@ import Logo from 'assets/img/logo.svg'
 
 import { menuItems } from './menu-items'
 
+// TODO: favicon, manifest, bounty code, dist signup, matomo
+
 const Header = () => {
     return (
         <Disclosure
