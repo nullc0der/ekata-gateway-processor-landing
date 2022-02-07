@@ -20,8 +20,8 @@ const Hero = () => {
                             Fast, Secure, Easy Integrable{' '}
                             <br className="hidden sm:inline" /> Cryptocurrency
                             payment processor for
-                            <br className="hidden sm:inline" /> web2 and mobile
-                            applications.
+                            <br className="hidden sm:inline" /> websites and
+                            mobile applications.
                         </p>
                         <p className="text-sm 2xl:text-md mt-2 ml-1 text-gray-600">
                             Accept crypto in your shop without the worry of
