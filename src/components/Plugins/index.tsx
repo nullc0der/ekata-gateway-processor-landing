@@ -1,20 +1,26 @@
 import { motion } from 'framer-motion'
 
-import { ReactComponent as PythonLogo } from 'assets/img/python.svg'
-import { ReactComponent as ReactLogo } from 'assets/img/react.svg'
-import { ReactComponent as AndroidLogo } from 'assets/img/android.svg'
-import { ReactComponent as IosLogo } from 'assets/img/apple-ios.svg'
-import { ReactComponent as WooCommerceLogo } from 'assets/img/woocommerce.svg'
-import { ReactComponent as ShopifyLogo } from 'assets/img/shopify.svg'
-import { ReactComponent as OdooLogo } from 'assets/img/odoo.svg'
-import { ReactComponent as NodeJSLogo } from 'assets/img/nodejs.svg'
+import PythonLogo from 'assets/img/python.svg'
+import ReactLogo from 'assets/img/react.svg'
+import AndroidLogo from 'assets/img/android.svg'
+import IosLogo from 'assets/img/apple-ios.svg'
+import WooCommerceLogo from 'assets/img/woocommerce.svg'
+import ShopifyLogo from 'assets/img/shopify.svg'
+import OdooLogo from 'assets/img/odoo.svg'
+import NodeJSLogo from 'assets/img/nodejs.svg'
 
 const SUPPORTED_PLUGINS = [
     {
         name: 'Python',
         subtitle:
             'Python is an interpreted high-level general-purpose programming language',
-        logo: <PythonLogo className="w-[60px] h-[60px]" />,
+        logo: (
+            <img
+                src={PythonLogo}
+                className="w-[60px] h-[60px]"
+                alt="Python logo"
+            />
+        ),
         comingSoon: false,
         type: 'Helper',
         homePage: 'https://pypi.org/project/ekata-gateway-processor-helper/',
@@ -26,7 +32,13 @@ const SUPPORTED_PLUGINS = [
         name: 'React',
         subtitle:
             'React is a free and open-source front-end JavaScript library for building user interfaces based on UI components',
-        logo: <ReactLogo className="w-[60px] h-[60px]" />,
+        logo: (
+            <img
+                src={ReactLogo}
+                className="w-[60px] h-[60px]"
+                alt="React logo"
+            />
+        ),
         comingSoon: false,
         type: 'Plugin',
         homePage:
@@ -39,7 +51,13 @@ const SUPPORTED_PLUGINS = [
         name: 'Node.js',
         subtitle:
             'Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that runs on the V8 engine.',
-        logo: <NodeJSLogo className="w-[60px] h-[60px]" />,
+        logo: (
+            <img
+                src={NodeJSLogo}
+                className="w-[60px] h-[60px]"
+                alt="NodeJS logo"
+            />
+        ),
         comingSoon: false,
         type: 'Helper',
         homePage:
@@ -52,7 +70,13 @@ const SUPPORTED_PLUGINS = [
         name: 'Android',
         subtitle:
             'Android is a mobile operating system based on a modified version of the Linux kernel and other open source software',
-        logo: <AndroidLogo className="w-[60px] h-[60px]" />,
+        logo: (
+            <img
+                src={AndroidLogo}
+                className="w-[60px] h-[60px]"
+                alt="Android logo"
+            />
+        ),
         comingSoon: true,
         type: '',
         homePage: '',
@@ -63,7 +87,9 @@ const SUPPORTED_PLUGINS = [
         name: 'iOS',
         subtitle:
             'iOS is a mobile operating system created and developed by Apple Inc. exclusively for its hardware',
-        logo: <IosLogo className="w-[60px] h-[60px]" />,
+        logo: (
+            <img src={IosLogo} className="w-[60px] h-[60px]" alt="iOS logo" />
+        ),
         comingSoon: true,
         type: '',
         homePage: '',
@@ -74,7 +100,13 @@ const SUPPORTED_PLUGINS = [
         name: 'WooCommerce',
         subtitle:
             'WooCommerce is an open-source e-commerce plugin for WordPress',
-        logo: <WooCommerceLogo className="w-[60px] h-[60px]" />,
+        logo: (
+            <img
+                src={WooCommerceLogo}
+                className="w-[60px] h-[60px]"
+                alt="WooCommerce logo"
+            />
+        ),
         comingSoon: true,
         type: '',
         homePage: '',
@@ -85,7 +117,13 @@ const SUPPORTED_PLUGINS = [
         name: 'Shopify',
         subtitle:
             'Shopify is a proprietary e-commerce platform for online stores and retail point-of-sale systems',
-        logo: <ShopifyLogo className="w-[60px] h-[60px]" />,
+        logo: (
+            <img
+                src={ShopifyLogo}
+                className="w-[60px] h-[60px]"
+                alt="Shopify logo"
+            />
+        ),
         comingSoon: true,
         type: '',
         homePage: '',
@@ -95,7 +133,9 @@ const SUPPORTED_PLUGINS = [
     {
         name: 'Odoo',
         subtitle: 'Odoo is a suite of business management software tools',
-        logo: <OdooLogo className="w-[60px] h-[60px]" />,
+        logo: (
+            <img src={OdooLogo} className="w-[60px] h-[60px]" alt="Odoo logo" />
+        ),
         comingSoon: true,
         type: '',
         homePage: '',

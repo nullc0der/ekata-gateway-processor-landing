@@ -37,15 +37,14 @@ const Header = () => {
                                 alt="logo"
                                 className="h-[70px] w-[70px]"
                             />
-                            {/* <div className="absolute flex items-center left-2 sm:left-0 text-green-400"></div> */}
                             <div className="hidden sm:block">
-                                <div className="flex space-x-4">
+                                <div className="flex space-x-4 h-12">
                                     {menuItems.map((x, i) => (
-                                        <div className="px-2 relative group">
+                                        <div className="flex items-center px-2 h-full relative group cursor-pointer">
                                             {x.external ? (
                                                 <a
                                                     key={i}
-                                                    className="text-gray-700 group-hover:text-gray-900"
+                                                    className="text-gray-700 group-hover:text-green-500"
                                                     href={x.link}
                                                     target="_blank"
                                                     rel="noreferrer">
@@ -54,12 +53,33 @@ const Header = () => {
                                             ) : (
                                                 <a
                                                     key={i}
-                                                    className="text-gray-700 group-hover:text-gray-900"
+                                                    className="text-gray-700 group-hover:text-green-500"
                                                     href={x.link}>
                                                     {x.name}
                                                 </a>
                                             )}
-                                            <div className="absolute left-0 -bottom-7 group-hover:w-full w-0 h-1 bg-green-500 rounded-t" />
+                                            <div className="absolute left-0 -bottom-4 group-hover:w-full w-0 h-1 bg-green-500 rounded-t transition-all" />
+                                            <div className="absolute left-0 top-[100%] flex flex-col invisible opacity-0 transition-opacity group-hover:visible group-hover:opacity-100">
+                                                {x.subMenu && (
+                                                    <div className="flex flex-col bg-white min-w-[200px] mt-8 rounded-lg shadow-lg">
+                                                        {x.subMenu.map(
+                                                            (x, i) => (
+                                                                <a
+                                                                    key={i}
+                                                                    className="text-sm text-gray-700 hover:text-green-500 pt-2 first:pt-4 last:pb-4 px-4 flex items-center"
+                                                                    href={
+                                                                        x.link
+                                                                    }
+                                                                    target="_blank"
+                                                                    rel="noreferrer">
+                                                                    {x.logo}
+                                                                    {x.name}
+                                                                </a>
+                                                            )
+                                                        )}
+                                                    </div>
+                                                )}
+                                            </div>
                                         </div>
                                     ))}
                                 </div>
@@ -83,34 +103,52 @@ const Header = () => {
                         leave="transition duration-100 ease-out"
                         leaveFrom="transform scale-100 opacity-100"
                         leaveTo="transform scale-50 opacity-0">
-                        <div className="px-2 pt-2 pb-3 space-y-1 absolute top-4 right-4 left-4 shadow-2xl rounded-md bg-white sm:hidden">
+                        <div className="px-2 pt-2 pb-3 absolute top-4 right-4 left-4 shadow-2xl rounded-md bg-white sm:hidden">
                             <Disclosure.Button className="absolute right-4 top-4 text-green-400">
                                 <XIcon
                                     className="block h-6 w-6"
                                     aria-hidden="true"
                                 />
                             </Disclosure.Button>
-                            {menuItems.map((x, i) =>
-                                x.external ? (
-                                    <Disclosure.Button
-                                        key={i}
-                                        as="a"
-                                        className="text-gray-700 block px-3 py-2 rounded-md"
-                                        href={x.link}
-                                        target="_blank"
-                                        rel="noreferrer">
-                                        {x.name}
-                                    </Disclosure.Button>
-                                ) : (
-                                    <Disclosure.Button
-                                        key={i}
-                                        as="a"
-                                        className="text-gray-700 block px-3 py-2 rounded-md"
-                                        href={x.link}>
-                                        {x.name}
-                                    </Disclosure.Button>
-                                )
-                            )}
+                            {menuItems.map((x, i) => (
+                                <div className="px-4 py-2">
+                                    {x.external ? (
+                                        <Disclosure.Button
+                                            key={i}
+                                            as="a"
+                                            className="text-green-500 font-medium block rounded-md"
+                                            href={x.link}
+                                            target="_blank"
+                                            rel="noreferrer">
+                                            {x.name}
+                                        </Disclosure.Button>
+                                    ) : (
+                                        <Disclosure.Button
+                                            key={i}
+                                            as="a"
+                                            className="text-green-500 font-medium block rounded-md"
+                                            href={x.link}>
+                                            {x.name}
+                                        </Disclosure.Button>
+                                    )}
+                                    {x.subMenu && (
+                                        <div className="ml-4 mt-2">
+                                            {x.subMenu.map((x, i) => (
+                                                <Disclosure.Button
+                                                    key={i}
+                                                    as="a"
+                                                    className="text-sm font-light text-gray-600 mb-2 last:mb-0 flex items-center"
+                                                    href={x.link}
+                                                    target="_blank"
+                                                    rel="noreferrer">
+                                                    {x.logo}
+                                                    {x.name}
+                                                </Disclosure.Button>
+                                            ))}
+                                        </div>
+                                    )}
+                                </div>
+                            ))}
                             <div className="mx-2">
                                 <button className="bg-green-500 py-2 w-full rounded text-white sm:hidden">
                                     <a
