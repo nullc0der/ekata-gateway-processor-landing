@@ -88,7 +88,12 @@ const Integration = ({ id }: IntegrationProps) => {
                         />
                         {selectedID === 0 ? (
                             <button className="bg-green-500 px-6 h-12 w-40 rounded text-white">
-                                Go to console
+                                <a
+                                    href="https://gpconsole.ekata.io/projects"
+                                    target="_blank"
+                                    rel="noreferrer">
+                                    Go to console
+                                </a>
                             </button>
                         ) : (
                             <img
