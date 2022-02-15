@@ -100,6 +100,22 @@ const Pricing = ({ id }: PricingProps) => {
                     <motion.div
                         whileHover={{ scale: 1.1, zIndex: 1 }}
                         whileTap={{ scale: 1.1, zIndex: 1 }}
+                        initial="offScreen"
+                        whileInView="onScreen"
+                        viewport={{ once: true }}
+                        variants={{
+                            offScreen: {
+                                scale: 0.8,
+                            },
+                            onScreen: {
+                                scale: 1,
+                                transition: {
+                                    duration: 0.8,
+                                    type: 'spring',
+                                    bounce: 0.4,
+                                },
+                            },
+                        }}
                         className={`flex flex-col px-8 py-4 m-4 h-[500px] w-[400px] bg-white rounded-md shadow-lg relative before:absolute before:top-0 before:rounded-t before:left-0 before:block before:content-[''] before:w-full before:h-1 ${x.beforeColor}`}
                         key={i}>
                         <p className="text-3xl font-medium text-gray-700 text-center mt-5">

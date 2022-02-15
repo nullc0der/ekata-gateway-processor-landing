@@ -159,9 +159,25 @@ const Plugins = ({ id }: PluginsProps) => {
             <div className="flex flex-row flex-wrap mt-10 justify-center">
                 {SUPPORTED_PLUGINS.map((x, i) => (
                     <motion.div
-                        className="bg-white rounded-md shadow-lg flex flex-col items-center justify-center mx-2 my-4 relative py-4 px-8 group"
+                        className="bg-white rounded-md shadow-lg flex flex-col items-center justify-center mx-2 my-4 relative py-4 px-6 group"
                         whileHover={{ scale: 1.1, zIndex: 1 }}
                         whileTap={{ scale: 1.1, zIndex: 1 }}
+                        initial="offScreen"
+                        whileInView="onScreen"
+                        viewport={{ once: true }}
+                        variants={{
+                            offScreen: {
+                                y: 20,
+                            },
+                            onScreen: {
+                                y: 0,
+                                transition: {
+                                    duration: 0.8,
+                                    type: 'spring',
+                                    bounce: 0.4,
+                                },
+                            },
+                        }}
                         key={i}>
                         {!!x.comingSoon && (
                             <div className="bg-green-500 text-white text-[0.75rem] rounded-3xl p-2 absolute right-1 -top-5 z-[2]">

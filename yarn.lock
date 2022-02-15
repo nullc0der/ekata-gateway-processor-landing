@@ -1104,6 +1104,16 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@fontsource/material-icons-outlined@^4.5.2":
+  version "4.5.2"
+  resolved "https://registry.yarnpkg.com/@fontsource/material-icons-outlined/-/material-icons-outlined-4.5.2.tgz#2db2914f54de1fdb480186bb8ae4f7023e407f0d"
+  integrity sha512-yEanCFpvd7+W9HGJRxs0QCoKu7dJmOynZBqKSMB0oO9SNl7SlXw9S/CO2jI3Hg4+1Husk/F13Ch7jsboYUjWuA==
+
+"@fontsource/material-icons@^4.5.2":
+  version "4.5.2"
+  resolved "https://registry.yarnpkg.com/@fontsource/material-icons/-/material-icons-4.5.2.tgz#0a914c0d52272efd37d2b45c79c75a3839bb9e66"
+  integrity sha512-J6Slv1GhQ42TF/DbEIvsebIe1rYvkMrEglVsPYvKAnbQzpm7m7Uv4bkpbsqxjXJvaJZWefg1sXqvCOYAyBTfIA==
+
 "@headlessui/react@^1.4.3":
   version "1.4.3"
   resolved "https://registry.yarnpkg.com/@headlessui/react/-/react-1.4.3.tgz#f77c6bb5cb4a614a5d730fb880cab502d48abf37"

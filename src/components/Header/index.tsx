@@ -15,7 +15,8 @@ const Header = () => {
                 'bg-gray-50',
                 'shadow-md',
                 'absolute',
-                'inset-x-0'
+                'inset-x-0',
+                'z-[4]'
             )}>
             {({ open }) => (
                 <>
@@ -59,7 +60,7 @@ const Header = () => {
                                                 </a>
                                             )}
                                             <div className="absolute left-0 -bottom-4 group-hover:w-full w-0 h-1 bg-green-500 rounded-t transition-all" />
-                                            <div className="absolute left-0 top-[100%] flex flex-col invisible opacity-0 transition-opacity group-hover:visible group-hover:opacity-100">
+                                            <div className="absolute left-0 top-[100%] flex flex-col invisible opacity-0 -translate-y-12 transition-all group-hover:visible group-hover:opacity-100 group-hover:translate-y-0">
                                                 {x.subMenu && (
                                                     <div className="flex flex-col bg-white min-w-[200px] mt-8 rounded-lg shadow-lg">
                                                         {x.subMenu.map(

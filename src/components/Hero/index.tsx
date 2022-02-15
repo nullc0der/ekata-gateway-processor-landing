@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion'
+
 import PaymentFormGIF from 'assets/img/payment-screen-600.gif'
 import ConsoleIMG from 'assets/img/console.png'
 
@@ -6,7 +8,24 @@ const Hero = () => {
         <div className="h-screen bg-gray-100 pt-20">
             <div className="container mx-auto flex flex-row items-center h-full">
                 <div className="flex flex-col justify-center">
-                    <div className="p-4 sm:px-14 sm:py-6">
+                    <motion.div
+                        className="p-4 sm:px-14 sm:py-6"
+                        initial="offScreen"
+                        whileInView="onScreen"
+                        viewport={{ once: true }}
+                        variants={{
+                            offScreen: {
+                                y: 20,
+                            },
+                            onScreen: {
+                                y: 0,
+                                transition: {
+                                    duration: 0.8,
+                                    type: 'spring',
+                                    bounce: 0.4,
+                                },
+                            },
+                        }}>
                         <p className="text-7xl 2xl:text-8xl text-green-500">
                             Ekata
                         </p>
@@ -37,10 +56,27 @@ const Hero = () => {
                                 Demo
                             </a>
                         </button>
-                    </div>
+                    </motion.div>
                 </div>
                 <div className="hidden lg:flex h-full relative">
-                    <div className="2xl:p-20">
+                    <motion.div
+                        className="2xl:p-20"
+                        initial="offScreen"
+                        whileInView="onScreen"
+                        viewport={{ once: true }}
+                        variants={{
+                            offScreen: {
+                                y: 20,
+                            },
+                            onScreen: {
+                                y: 0,
+                                transition: {
+                                    duration: 0.8,
+                                    type: 'spring',
+                                    bounce: 0.4,
+                                },
+                            },
+                        }}>
                         <img
                             src={PaymentFormGIF}
                             alt="payment form"
@@ -51,8 +87,8 @@ const Hero = () => {
                             alt="Console"
                             className="absolute max-w-[600px] 2xl:max-w-[800px] my-auto top-0 bottom-0 left-[200px] 2xl:left-[300px] z-[2] rounded shadow-md"
                         />
-                        <div className="h-[800px] w-[800px] bg-green-500 rounded-full absolute top-0 bottom-0 my-auto left-[500px] 2xl:left-[800px] z-[1]" />
-                    </div>
+                        <div className="h-[800px] w-[800px] bg-gradient-to-br from-green-400 via-green-200 to-green-100 rounded-full absolute top-0 bottom-0 my-auto left-[400px] 2xl:left-[700px]" />
+                    </motion.div>
                 </div>
             </div>
         </div>

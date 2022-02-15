@@ -50,6 +50,22 @@ const Currencies = ({ id }: CurrenciesProps) => {
                         className="flex flex-col items-center justify-center mx-2 my-4 p-4 relative cursor-pointer"
                         whileHover={{ scale: 1.1, zIndex: 1 }}
                         whileTap={{ scale: 1.1, zIndex: 1 }}
+                        initial="offScreen"
+                        whileInView="onScreen"
+                        viewport={{ once: true }}
+                        variants={{
+                            offScreen: {
+                                y: 20,
+                            },
+                            onScreen: {
+                                y: 0,
+                                transition: {
+                                    duration: 0.8,
+                                    type: 'spring',
+                                    bounce: 0.4,
+                                },
+                            },
+                        }}
                         key={i}>
                         <a href={x.link} target="_blank" rel="noreferrer">
                             {x.logo}

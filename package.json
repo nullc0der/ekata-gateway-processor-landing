@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "@datapunt/matomo-tracker-react": "^0.5.1",
+    "@fontsource/material-icons": "^4.5.2",
+    "@fontsource/material-icons-outlined": "^4.5.2",
     "@headlessui/react": "^1.4.3",
     "@heroicons/react": "^1.0.5",
     "@testing-library/jest-dom": "^5.14.1",

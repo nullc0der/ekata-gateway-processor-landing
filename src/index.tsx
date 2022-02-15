@@ -6,6 +6,9 @@ import { MatomoProvider, createInstance } from '@datapunt/matomo-tracker-react'
 import App from 'containers/App'
 import reportWebVitals from './reportWebVitals'
 
+import '@fontsource/material-icons'
+import '@fontsource/material-icons-outlined'
+
 const instance = createInstance({
     urlBase: 'https://matomo.ekata.io',
     siteId: Number(process.env.REACT_APP_MATOMO_SITE_ID),

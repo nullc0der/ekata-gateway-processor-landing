@@ -29,8 +29,8 @@ const Footer = () => {
                         className="bg-gray-600 rounded h-8 w-max px-2 mt-2"
                         placeholder="yourname@example.com"
                     />
-                    <button className="bg-gray-600 rounded h-8 w-max px-4 text-white mt-2">
-                        Subscribe
+                    <button className="bg-gray-600 rounded py-2 w-max px-4 text-white mt-2">
+                        Subscribe <span className="material-icons">send</span>
                     </button>
                 </div>
             </div>

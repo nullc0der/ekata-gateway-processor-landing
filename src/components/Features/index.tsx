@@ -25,6 +25,22 @@ const Features = ({ id }: FeaturesProps) => {
                                     className="sm:w-[300px] lg:w-[400px] h-[200px] shadow-lg bg-white rounded-md flex flex-col items-center justify-between p-4 mx-2 my-4 cursor-pointer relative"
                                     whileHover={{ scale: 1.1, zIndex: 1 }}
                                     whileTap={{ scale: 1.1, zIndex: 1 }}
+                                    initial="offScreen"
+                                    whileInView="onScreen"
+                                    viewport={{ once: true }}
+                                    variants={{
+                                        offScreen: {
+                                            scale: 0.8,
+                                        },
+                                        onScreen: {
+                                            scale: 1,
+                                            transition: {
+                                                duration: 0.8,
+                                                type: 'spring',
+                                                bounce: 0.4,
+                                            },
+                                        },
+                                    }}
                                     key={i}>
                                     {!!x.comingSoon && (
                                         <div className="bg-green-500 text-white text-[0.75rem] rounded-3xl p-2 absolute right-1 -top-5">
