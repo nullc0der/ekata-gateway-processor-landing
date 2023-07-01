@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@datapunt/matomo-tracker-react": "^0.5.1",
     "@fontsource/material-icons": "^4.5.2",
     "@fontsource/material-icons-outlined": "^4.5.2",
     "@headlessui/react": "^1.4.3",
     "@heroicons/react": "^1.0.5",
+    "@jonkoops/matomo-tracker-react": "^0.7.0",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.0.0",
     "@testing-library/user-event": "^13.2.1",

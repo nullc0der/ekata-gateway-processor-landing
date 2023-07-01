@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import { MatomoProvider, createInstance } from '@datapunt/matomo-tracker-react'
+import { MatomoProvider, createInstance } from '@jonkoops/matomo-tracker-react'
 
 import App from 'containers/App'
 import reportWebVitals from './reportWebVitals'
